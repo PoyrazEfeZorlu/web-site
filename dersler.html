@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dersler - Kişisel Web Sitem</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #2c3e50; color: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #4ca1af; }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #4ca1af; }
+        
+        main { flex: 1; padding: 40px 20px; max-width: 1100px; margin: 0 auto; width: 100%; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 10px; color: #2c3e50; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+        
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .day-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
+        .day-header { background-color: #34495e; color: #fff; padding: 12px 20px; font-size: 1.2rem; font-weight: bold; }
+        
+        .lesson-list { list-style: none; padding: 15px 20px; }
+        .lesson-item { border-bottom: 1px solid #eee; padding: 10px 0; display: flex; justify-content: space-between; align-items: center; }
+        .lesson-item:last-child { border-bottom: none; }
+        .time { font-size: 0.85rem; color: #4ca1af; font-weight: bold; width: 100px; }
+        .lesson-name { font-size: 0.95rem; color: #333; flex: 1; }
+        
+        footer { text-align: center; padding: 20px; background-color: #2c3e50; color: #fff; }
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            .nav-links { margin-top: 15px; }
+            .nav-links li { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PoyrazEfeZorlu</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="dersler.html" class="active">Dersler</a></li>
+                <li><a href="odevler.html">Ödevler</a></li>
+                <li><a href="portfolyo.html">Portfolyo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Haftalık Ders Programı</h2>
+        <p class="subtitle">Balıkesir Üniversitesi - Bilgisayar Programcılığı I. Sınıf</p>
+        
+        <div class="grid-container">
+            <!-- PAZARTESİ -->
+            <div class="day-card">
+                <div class="day-header">Pazartesi</div>
+                <ul class="lesson-list">
+                    <li class="lesson-item"><span class="time">09:25 - 11:05</span><span class="lesson-name">Ağ Yönetimi ve Bilgi Güv.</span></li>
+                    <li class="lesson-item"><span class="time">11:15 - 14:10</span><span class="lesson-name">Temel ve Dijital Elektronik</span></li>
+                    <li class="lesson-item"><span class="time">14:20 - 16:00</span><span class="lesson-name">Gönüllülük Çalışmaları</span></li>
+                </ul>
+            </div>
+
+            <!-- SALI -->
+            <div class="day-card">
+                <div class="day-header">Salı</div>
+                <ul class="lesson-list">
+                    <li class="lesson-item"><span class="time">14:20 - 16:55</span><span class="lesson-name">Ofis Yazılımları</span></li>
+                </ul>
+            </div>
+
+            <!-- ÇARŞAMBA -->
+            <div class="day-card">
+                <div class="day-header">Çarşamba</div>
+                <ul class="lesson-list">
+                    <li class="lesson-item"><span class="time">09:25 - 12:00</span><span class="lesson-name">Matematik I</span></li>
+                    <li class="lesson-item"><span class="time">12:30 - 14:10</span><span class="lesson-name">A.İ.İ.T. I</span></li>
+                    <li class="lesson-item"><span class="time">14:20 - 16:00</span><span class="lesson-name">İletişim</span></li>
+                    <li class="lesson-item"><span class="time">16:10 - 16:55</span><span class="lesson-name">Ofis Yazılımları</span></li>
+                </ul>
+            </div>
+
+            <!-- PERŞEMBE -->
+            <div class="day-card">
+                <div class="day-header">Perşembe</div>
+                <ul class="lesson-list">
+                    <li class="lesson-item"><span class="time">10:20 - 14:10</span><span class="lesson-name">Algor. ve Progr. Tem.</span></li>
+                </ul>
+            </div>
+
+            <!-- CUMA -->
+            <div class="day-card">
+                <div class="day-header">Cuma</div>
+                <ul class="lesson-list">
+                    <li class="lesson-item"><span class="time">10:20 - 12:00</span><span class="lesson-name">T. Dili I</span></li>
+                    <li class="lesson-item"><span class="time">15:15 - 16:55</span><span class="lesson-name">İngilizce I</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+     
+    </footer>
+</body>
+</html>
